@@ -1,14 +1,33 @@
-# bip39scan v 3.2 + Vulnerable generator libbitcoin v3.2
+# bip39scan v 3.2 + Vulnerable generator libbitcoin v3.2 - For sale $500
+To purchase, write to telegram ```@phrutis``` or buy from a bot in a group [t.me/cuda8](https://t.me/cuda8)<br>
+The program is sold with the source code (cmake VS2022) + ready-made programs (multigpu) for win, lin, hiveos, Ubuntu 20.04 (22.04)<br>
+**There are 2 previous versions in folder BONUS for free [bip39scan v1](https://github.com/phrutis/bip39scan) + [bip39scan v2](https://github.com/phrutis/bip39scan) + (with sources)**
 
-https://habr.com/ru/articles/771980/
+More about the vulnerability Milk Sad:<br>
+RU https://habr.com/ru/articles/771980/<br>
+EN https://milksad.info<br>
+EN https://milksad.info/disclosure.html#codename-milk-sad<br>
+ 
+Vulnerability 32 bits in each length, each language.<br>
+The point is that 32 bits is not a large number of only 4294967296 phrases<br>
+At first glance it seems that at a speed of 500k/s it is only 2-3 hours???<br>
+How to find all 4294967296 phrases in random mode???<br>
+This is almost impossible.<br>
+Each phrase is random, after going through 4294967296 combinations, you will find 30% of phrases, 70% will be duplicates.<br>
+You will go through another 1000000000 combinations, you will find 20%.<br>
+To find the next 10% of unique phrases, you need to go through many times more combinations than before.<br>
+Therefore, it is impossible to find all the phrases.<br>
+Therefore, there is a high chance of finding a phrase with a positive balance that you could not find before.<br>
+Taking into account the different lengths and languages, this gives even more opportunities to find.<br>
+Let's add some non-standard patches and different coins here<br>
+Not everyone knows about this vulnerability. Some sites and applications still use this vulnerable library.<br>
+Therefore, the chance to find a fresh coin is very high. Update your address databases.<br>
+The main advantage of bip39scan v3 is its high speed!
 
-A modification bip39scan v3 was developed for this vulnerability<br>
 Only CUDA cards support GTX, RTX, CMP<br>
 Brute speed:<br>
 RTX 4090 = ~550k/s<br>
 RTX 5090 = ~800k/s<br>
-In Ubuntu (linux, hiveos) the speed can be higher by 10-20%<br>
-The program is sold with the source code (cmake VS2022) + ready-made programs (multigpu) for win, lin, hive, ubuntu<br>
 
 ## Mode 1
 
@@ -82,6 +101,7 @@ Bitcoin addresses 1.., 3.., bc.. (New long addresses bc.. does not accept)
 ARBITRUM, AVALANCHE, BASE, BNB, BSC, BTT, CRONOS, CELO, ETC, Ethereumnie, ERA, ERC20, ETH, Ethered, FANTOM, <br>
 GETH (Goerli), GNOSIS, IOTX, LINEA, MOONBEAM, MOONRIVER, OPBNB, OPTIMISM, POLYGON, VET, ZKEVM-POLYGON...<br>
 Add these arguments to run ```--bloom 4096M -t ethereum```<br>
+
 **Doesn't start on 8 GB cards! The database fits on a 12 GB card or more.** <br>
 **To run you need 32 GB of RAM (if you don't have that much, you can use the swap file)** <br>
 Download http://89.23.98.83/up/alleth.bin  **29 GB**
