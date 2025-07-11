@@ -37,6 +37,8 @@ RTX 5090 = ~800k/s<br>
 ```bip39scan.exe --save Found.txt -a allbc.bin -t bech32 --bloom 2048M -p m/84'/0'/0'/0/0-9 --bits 256```<br>
 ```bip39scan.exe --save Found.txt -a alleth.bin -t ethereum --bloom 4096M -p m/44'/60'/0'/0/0-9 --bits 256```
 
+<img width="977" height="511" alt="Image" src="https://github.com/user-attachments/assets/e787df51-071c-4fb7-bf7f-69299d045abc" />
+
 ### Length of phrases
 ```--bits 64``` (random phrase 6 words)<br>
 ```--bits 96``` (random phrase 9 words)<br>
