@@ -132,3 +132,6 @@ http://89.23.98.83/up/btc3.txt **240 MB**
 Download BTC addresses bc... 30/06/2025<br>
 http://89.23.98.83/up/bc.txt **842 MB**
 
+I recommend using large address bases.<br>
+For example, BCH may remain on the historical address 1... (P2PKH)
+
