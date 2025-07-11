@@ -135,3 +135,120 @@ http://89.23.98.83/up/bc.txt **842 MB**
 I recommend using large address bases.<br>
 For example, BCH may remain on the historical address 1... (P2PKH)
 
+## Building on Windows VS-2022
+
+Install cmake 3.30+ from this link: https://github.com/Kitware/CMake/releases/download/v3.31.8/cmake-3.31.8-windows-x86_64.msi<br>
+Or find another version on this page: https://cmake.org/download/<br>
+
+Install Visual Studio 2022 community: https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022<br>
+click the big Download button
+ 
+Install Nvidia CUDA 12.9: https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local<br>
+choose Windows version
+ 
+Install OpenSSL from https://slproweb.com/download/Win64OpenSSL-3_0_16.msi
+
+Go to the "Sources" folder<br>
+In cmd run: 
+
+```cmake bip39scan```
+
+The project files will appear in the folder:<br>
+bip39scan.sln (run this file the project will open)<br>
+bip39scan.vcxproj<br>
+bip39scan.vcxproj.filters<br>
+..
+
+![brute bip39 phrases](https://github.com/user-attachments/assets/16e2197f-a01e-43ee-a02e-5b6f9e515e15)
+
+OpenSSL should be found. If now, rename c:\program files\OpenSSL-Win64 to OpenSSL and re-run. Note that the libcrypto dll should<br>
+be in PATH or in the current directory when running bip39scan.
+
+ 
+Visual Studio 2022 opens. In the top toolbar choose: Release/x64.<br>
+In the "Solution explorer" to the right, right-click bip39scan, choose "build".<br>
+The executable builds in the your-build-directory\Release
+ 
+![gpu brute bip39 mnemonic](https://github.com/user-attachments/assets/34d6574c-20a3-462c-a857-117ae9ae664f)
+
+If necessary run precomp.exe file precomp.bin will be generated
+
+## Building on Ubuntu:
+
+Below is detailed instruction with bash commands required to build bip39scan.<br>
+The symbol '$' denotes command prompt.<br>
+If your prompt is shown as '#' on your terminal, skip 'sudo'.<br>
+For example, instead of
+
+$ sudo sh cuda_12.0.1_525.85.12_linux.run
+
+you should run
+
+sh cuda_12.0.1_525.85.12_linux.run
+
+Let's start.
+
+install CUDA. Download the linux version from the NVIDIA website and run.<br>
+Open https://developer.nvidia.com/cuda-12-0-1-download-archive?target_os=Linux<br>
+in your browser and choose your system. The following is valid for Ubuntu 18.04.
+
+$ wget https://developer.download.nvidia.com/compute/cuda/12.0.1/local_installers/cuda_12.0.1_525.85.12_linux.run<br>
+$ sudo sh cuda_12.0.1_525.85.12_linux.run
+
+Skip the driver installation (deselect the 'driver' checkbox) if you already have it.
+
+To ensure the cuda is installed, run:<br>
+$ nvcc --version<br>
+
+It should print information and version of CUDA.<br>
+If no nvcc is found, try adding the CUDA bin path to the PATH variable:<br>
+$ export PATH=/usr/local/cuda/bin:$PATH
+
+install build-essential:<br>
+$ sudo apt-get install build-essential
+
+Check the gcc version:<br>
+$ gcc --version
+
+if the version is less than 9, install gcc 9:
+
+$ sudo apt-get install software-properties-common<br>
+$ sudo add-apt-repository ppa:jonathonf/gcc<br>
+$ sudo apt-get update<br>
+$ sudo apt-get install gcc-9<br>
+$ sudo apt-get install g++-9<br>
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 10<br>
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 10
+
+install libssl:<br>
+$ sudo apt-get install libssl-dev<br>
+for the client-server version, install boost:<br>
+$ sudo apt-get install libboost-all-dev
+
+You will need Boost version at least 1.71. If apt-get does not intall at least 1.71, build Boost from source:
+$ wget https://archives.boost.io/release/1.71.0/source/boost_1_71_0.tar.gz<br>
+$ tar -xzvf boost_1_71_0.tar.gz<br>
+$ cd boost_1_71_0<br>
+$ ./bootstrap.sh --prefix=/usr && ./b2 stage threading=multi link=static<br>
+$ sudo ./b2 install threading=multi link=static<br>
+$ sudo ln -svf detail/sha1.hpp /usr/include/boost/uuid/sha1.hpp
+
+install cmake from here: https://cmake.org/download/ choose Binary distributions, if that does not work - build from source<br>
+$ wget https://github.com/Kitware/CMake/releases/download/v3.28.0/cmake-3.28.0-linux-x86_64.tar.gz<br>
+$ tar -xzvf cmake-3.28.0-linux-x86_64.tar.gz
+
+unpack the bip39scan source, let's say bip39scan/<br>
+make an empty build directory, and run cmake in it e.g.<br>
+$ mkdir bip39scan-build<br>
+$ cd bip39scan-build
+
+On first make, it will generate precomp.bin file, which may take quite some time. <br>
+If you already have the precomp.bin, copy it to the build directory and comment this line in the ../bip39scan/CMakeLists.txt: add_dependencies(bip39scan precomp-bin) like this:<br>
+#add_dependencies(bip39scan precomp-bin)
+
+Save CMakeLists.txt and run cmake:
+$ ../cmake-3.28.0-linux-x86_64/bin/cmake ../bip39scan<br>
+
+where ../bip39scan is the source code directory<br>
+make the project<br>
+$ make bip39scan
