@@ -1,7 +1,7 @@
 # bip39scan v 3.2 + Vulnerable generator libbitcoin v3.2 - For sale $500
 To purchase, write to telegram ```@phrutis``` or buy from a bot in a group [t.me/cuda8](https://t.me/cuda8)<br>
 The program is sold with the source code (cmake VS2022) + ready-made programs (multigpu) for win, lin, hiveos, Ubuntu 20.04 (22.04)<br>
-**There are 2 previous versions in folder BONUS for free [bip39scan v1](https://github.com/phrutis/bip39scan) + [bip39scan v2](https://github.com/phrutis/bip39scan) + (with sources)**
+**There are 2 previous versions in folder BONUS for free [bip39scan v1](https://github.com/phrutis/bip39scan) + [bip39scan v2](https://github.com/phrutis/bip39scan2) + (with sources)**
 
 More about the vulnerability Milk Sad:<br>
 RU https://habr.com/ru/articles/771980/<br>
