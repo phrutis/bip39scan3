@@ -63,6 +63,10 @@ If not specified, the default will be en<br>
 ```-l zh_Hant``` Chinese (Traditional)<br>
 ex. ```bip39scan.exe --save Found.txt -a allbtc3.bin -t P2SH --bloom 2048M -p m/49'/0'/0'/0/0-9 --bits 128 -l it```
 
+<img width="978" height="325" alt="Image" src="https://github.com/user-attachments/assets/f525a4ab-209c-41b8-baab-ac6de917ddc8" />
+
+<img width="976" height="370" alt="Image" src="https://github.com/user-attachments/assets/70f884ad-21dd-40d2-bcd6-c091033cc2a2" />
+
 ## Linux (ubuntu, hiveos)
 The commands are the same as for Windows.<br>
 You need to add in patch \ before '
