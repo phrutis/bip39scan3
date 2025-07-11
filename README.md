@@ -58,7 +58,7 @@ If not specified, the default will be en<br>
 ```-l uk``` Ukrainian phrases<br>
 ```-l zh_Hans``` Chinese (Simplified)<br>
 ```-l zh_Hant``` Chinese (Traditional)<br>
-ex. ```bip39scan.exe --save Found.txt -a allbtc3.bin -t P2SH --bloom 2048M -p m/49'/0'/0'/0/0-9 --bits 128 -l zh_Hans```
+ex. ```bip39scan.exe --save Found.txt -a allbtc3.bin -t P2SH --bloom 2048M -p m/49'/0'/0'/0/0-9 --bits 128 -l it```
 
 ## Linux (ubuntu, hiveos)
 The commands are the same as for Windows.<br>
