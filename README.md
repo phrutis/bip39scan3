@@ -82,7 +82,7 @@ Create databases:<br>
 BTC<br>
 ```bip39scan.exe --save Found.txt -a btc1.txt -t P2PKH --save-bin btc1.bin -p m/44'/0'/0'/0/0-9 --bits 256```<br>
 ```bip39scan.exe --save Found.txt -a btc3.txt -t P2SH --save-bin btc3.bin -p m/49'/0'/0'/0/0-9 --bits 256```<br>
-```bip39scan.exe --save Found.txt -a btc-bc.txt -t bech32 --save-bin bc.bin-p m/84'/0'/0'/0/0-9 --bits 256```
+```bip39scan.exe --save Found.txt -a btc-bc.txt -t bech32 --save-bin bc.bin -p m/84'/0'/0'/0/0-9 --bits 256```
 
 ETH and tokens<br>
 ```bip39scan.exe --save Found.txt -a eth_addresses.txt --save-bin eth.bin -t ethereum -p m/44'/60'/0'/0/0-9 --bits 256```
