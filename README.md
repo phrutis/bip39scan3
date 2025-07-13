@@ -4,6 +4,8 @@ To purchase, write to telegram ```@phrutis``` or buy from a bot in a group [t.me
 The program is sold with the source code (cmake VS2022) + ready-made programs (multigpu) for win, lin, hiveos, Ubuntu 20.04 (22.04)<br>
 **There are 2 previous versions in folder BONUS for free [bip39scan v1](https://github.com/phrutis/bip39scan) + [bip39scan v2](https://github.com/phrutis/bip39scan2) + (with sources)**
 
+https://github.com/user-attachments/assets/68ce9389-cf9a-4296-944e-3410db1f469f
+
 More about the vulnerability Milk Sad:<br>
 RU https://habr.com/ru/articles/771980/<br>
 EN https://milksad.info<br>
