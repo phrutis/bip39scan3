@@ -26,7 +26,7 @@ No one has used this method! There are finds with a positive balance for it.
 
 [**View finds with positive balance**](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)<br>
 
-[**Download all empty finds CSV FOUNDS.txt (137к phrases)**](https://github.com/phrutis/bip39scan2/releases/download/3.2/FOUNDS.txt)<br>
+[**Download all empty finds CSV FOUNDS.txt (137к phrases)**](https://github.com/phrutis/bip39scan3/releases/download/3.2/FOUNDS.txt)<br>
 
 **Important! There is no continuation of the search.**<br> 
 If you stop brute force, start the program from the beginning, it will start searching all over again.<br> 
