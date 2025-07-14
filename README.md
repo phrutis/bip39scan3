@@ -1,28 +1,21 @@
 # bip39scan v 3.2 (Milk Sad) - For sale $500
-Vulnerable generator libbitcoin v3.2<br>
+Vulnerable generator libbitcoin explorer v3.2<br>
 To purchase, write to telegram ```@phrutis``` or buy from a bot in a group [t.me/cuda8](https://t.me/cuda8)<br>
 The program is sold with the source code (cmake VS2022) + ready-made programs (multigpu) for win, lin, hiveos, Ubuntu 20.04 (22.04)<br>
 **There are 2 previous versions in folder BONUS for free [bip39scan v1](https://github.com/phrutis/bip39scan) + [bip39scan v2](https://github.com/phrutis/bip39scan2) + (with sources)**
-
-https://github.com/user-attachments/assets/68ce9389-cf9a-4296-944e-3410db1f469f
 
 More about the vulnerability Milk Sad:<br>
 RU https://habr.com/ru/articles/771980/<br>
 EN https://milksad.info<br>
 EN https://milksad.info/disclosure.html#codename-milk-sad<br>
  
-Vulnerability 32 bits in each length, each language.<br>
-The point is that 32 bits is not a large number of only 4294967296 phrases<br>
-At first glance it seems that at a speed of 500k/s it is only 2-3 hours???<br>
-How to find all 4294967296 phrases in random mode???<br>
-This is almost impossible.<br>
-Each phrase is random, after going through 4294967296 combinations, you will find 30% of phrases, 70% will be duplicates.<br>
-You will go through another 1000000000 combinations, you will find 20%.<br>
-To find the next 10% of unique phrases, you need to go through many times more combinations than before.<br>
-Therefore, it is impossible to find all the phrases.<br>
-Therefore, there is a high chance of finding a phrase with a positive balance that you could not find before.<br>
-Taking into account the different lengths and languages, this gives even more opportunities to find.<br>
-Let's add some non-standard patches and different coins here<br>
+bip39scan v3 generates all possible mnemonics across the entire 32-bit<br>
+Unix timestamp range (from January 1, 1970, to January 19, 2038).<br>
+date/time: 1970-01-01 00:00:00 for first timestamp. If chosen english ETH addresses pach ```m/44'/60'/0'/0/0-9```<br>
+it will generate "milk sad ..." mnemonic<br>
+
+<img width="977" height="511" alt="Image" src="https://github.com/user-attachments/assets/e787df51-071c-4fb7-bf7f-69299d045abc" />
+
 Not everyone knows about this vulnerability. Some sites and applications still use this vulnerable library.<br>
 Therefore, the chance to find a fresh coin is very high. Update your address databases.<br>
 The main advantage of bip39scan v3 is its high speed!
@@ -32,14 +25,14 @@ Brute speed:<br>
 RTX 4090 = ~550k/s<br>
 RTX 5090 = ~800k/s<br>
 
+https://github.com/user-attachments/assets/68ce9389-cf9a-4296-944e-3410db1f469f
+
 ## Mode 1
 
 ```bip39scan.exe --save Found.txt -a allbtc1.bin -t P2PKH --bloom 2048M -p m/44'/0'/0'/0/0-9 --bits 256```<br>
 ```bip39scan.exe --save Found.txt -a allbtc3.bin -t P2SH --bloom 2048M -p m/49'/0'/0'/0/0-9 --bits 256```<br>
 ```bip39scan.exe --save Found.txt -a allbc.bin -t bech32 --bloom 2048M -p m/84'/0'/0'/0/0-9 --bits 256```<br>
 ```bip39scan.exe --save Found.txt -a alleth.bin -t ethereum --bloom 4096M -p m/44'/60'/0'/0/0-9 --bits 256```
-
-<img width="977" height="511" alt="Image" src="https://github.com/user-attachments/assets/e787df51-071c-4fb7-bf7f-69299d045abc" />
 
 ### Length of phrases
 ```--bits 64``` (random phrase 6 words)<br>
