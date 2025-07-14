@@ -10,15 +10,31 @@ EN https://milksad.info<br>
 EN https://milksad.info/disclosure.html#codename-milk-sad<br>
  
 bip39scan v3 generates all possible mnemonics across the entire 32-bit<br>
+Not everyone knows about this vulnerability. Some sites and applications still use this vulnerable library.<br>
+Therefore, the chance to find a fresh coin is very high. Update your address databases.<br>
+The main advantage of bip39scan v3 is its high speed!
+
+### The program's operating principle:<br>
+When first launched, the program checks all 4294967296 phrases in vulnerable 32 bits of entropy.<br>
+At a speed of 550k phrases per second - this is only 2 hours of brute force.<br>
+All these phrases have been checked many times, and are unlikely to have a positive balance.<br> 
+Perhaps with a fresh address base there is a chance to find a fresh coin.<br> 
+There is also a chance to find by a non-standard patch or a rare coin, token.<br>
+After that, the program again goes through 32 bits of entropy vulnerability but with greater depth, as if the entropy was generated a second time.<br>
+Then, the third, fourth ... the program searches indefinitely.
+
+No one has used this method! There are finds with a positive balance for it.<br>
+[View finds with positive balance](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)
+
+**Important! There is no continuation of the search.**<br> 
+If you stop brute force, start the program from the beginning, it will start searching all over again.<br> 
+You will find what you found before until you reach the place where you stopped.
+
 Unix timestamp range (from January 1, 1970, to January 19, 2038).<br>
 date/time: 1970-01-01 00:00:00 for first timestamp. If chosen english ETH addresses pach ```m/44'/60'/0'/0/0-9```<br>
 it will generate "milk sad ..." mnemonic<br>
 
 <img width="977" height="511" alt="Image" src="https://github.com/user-attachments/assets/e787df51-071c-4fb7-bf7f-69299d045abc" />
-
-Not everyone knows about this vulnerability. Some sites and applications still use this vulnerable library.<br>
-Therefore, the chance to find a fresh coin is very high. Update your address databases.<br>
-The main advantage of bip39scan v3 is its high speed!
 
 Only CUDA cards support GTX, RTX, CMP<br>
 Brute speed:<br>
