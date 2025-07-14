@@ -24,6 +24,11 @@ After that, the program again goes through 32 bits of entropy but with greater d
 Then, the third, fourth ... the program searches indefinitely.<br>
 No one has used this method! There are finds with a positive balance for it.
 
+Vulnerability 32 bits in each phrase length, in each language from the list. <br>
+Also several patches + different coins. This is for years of searching. <br>
+There are finds with a positive balance - this indicates that not everything was cleaned. <br>
+Perhaps they did not have such a fast GPUs program as bip39scan.
+
 [**View finds with positive balance**](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)<br>
 
 [**Download all empty finds CSV FOUNDS.txt (137к phrases)**](https://github.com/phrutis/bip39scan3/releases/download/3.2/FOUNDS.txt)<br>
