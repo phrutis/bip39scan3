@@ -20,11 +20,13 @@ At a speed of 550k phrases per second - this is only 2 hours of brute force.<br>
 All these phrases have been checked many times, and are unlikely to have a positive balance.<br> 
 Perhaps with a fresh address base there is a chance to find a fresh coin.<br> 
 There is also a chance to find by a non-standard patch or a rare coin, token.<br>
-After that, the program again goes through 32 bits of entropy vulnerability but with greater depth, as if the entropy was generated a second time.<br>
-Then, the third, fourth ... the program searches indefinitely.
+After that, the program again goes through 32 bits of entropy but with greater depth, as if the entropy was generated a second time.<br>
+Then, the third, fourth ... the program searches indefinitely.<br>
+No one has used this method! There are finds with a positive balance for it.
 
-No one has used this method! There are finds with a positive balance for it.<br>
-[View finds with positive balance](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)
+[**View finds with positive balance**](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)<br>
+
+[**Download all empty finds CSV FOUNDS.txt**](https://github.com/phrutis/bip39scan2/releases/download/3.2/FOUNDS.txt)<br>
 
 **Important! There is no continuation of the search.**<br> 
 If you stop brute force, start the program from the beginning, it will start searching all over again.<br> 
