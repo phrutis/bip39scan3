@@ -29,9 +29,9 @@ Also several patches + different coins. This is for years of searching. <br>
 There are finds with a positive balance - this indicates that not everything was cleaned. <br>
 Perhaps they did not have such a fast GPUs program as bip39scan.
 
-[**View finds with positive balance**](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)<br>
+[**View 27 finds BTC with positive balance**](https://github.com/phrutis/bip39scan3/blob/main/Founds.md)<br>
 
-[**Download all empty finds CSV FOUNDS.txt (137к phrases)**](https://github.com/phrutis/bip39scan3/releases/download/3.2/FOUNDS.txt)<br>
+[**Download all empty finds CSV FOUNDS.txt (219к phrases)**](https://github.com/phrutis/bip39scan3/releases/download/3.2/FOUNDS.txt)<br>
 
 **Important! There is no continuation of the search.**<br> 
 If you stop brute force, start the program from the beginning, it will start searching all over again.<br> 
